@@ -9,6 +9,7 @@
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.js",
   "types": "dist/types/index.d.ts",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/asmyshlyaev177/react-horizontal-scrolling-menu.git"
