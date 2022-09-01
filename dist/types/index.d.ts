@@ -3,10 +3,8 @@ import './styles.css';
 import { publicApiType } from './createApi';
 import { observerOptions as defaultObserverOptions } from './settings';
 import * as constants from './constants';
-import { VisibilityContext } from './context';
 import type { ItemType } from './types';
 import slidingWindow from './slidingWindow';
-import getItemsPos from './getItemsPos';
 declare type ComponentType = React.ReactNode | JSX.Element | React.FC;
 export interface Props {
     /**
@@ -124,4 +122,15 @@ export interface Props {
   https://github.com/asmyshlyaev177/react-horizontal-scrolling-menu
  */
 declare function ScrollMenu({ LeftArrow: _LeftArrow, RightArrow: _RightArrow, children, Header: _Header, Footer: _Footer, transitionDuration, transitionEase, transitionBehavior, onInit, onUpdate, onMouseDown, onMouseUp, onMouseMove, onScroll, onWheel, options, scrollContainerClassName, itemClassName, separatorClassName, wrapperClassName, apiRef, RTL, noPolyfill, }: Props): JSX.Element;
-export { constants, getItemsPos, slidingWindow, ScrollMenu, VisibilityContext };
+declare const _default: {
+    constants: typeof constants;
+    getItemsPos: (items: import("./types").visibleItems) => {
+        first: string;
+        center: string;
+        last: string;
+    };
+    slidingWindow: typeof slidingWindow;
+    ScrollMenu: typeof ScrollMenu;
+    VisibilityContext: React.Context<publicApiType>;
+};
+export default _default;
