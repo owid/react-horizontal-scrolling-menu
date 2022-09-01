@@ -302,4 +302,10 @@ function ScrollMenu({
   );
 }
 
-export { constants, getItemsPos, slidingWindow, ScrollMenu, VisibilityContext };
+export default {
+  constants,
+  getItemsPos,
+  slidingWindow,
+  ScrollMenu,
+  VisibilityContext,
+};
