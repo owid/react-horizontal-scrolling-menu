@@ -37,23 +37,23 @@ const plugins = [
 
 export default [
   // browser-friendly UMD build
-  {
-    input,
-    output: {
-      name: 'react-horizontal-scrolling-menu',
-      file: pkg.browser,
-      format: 'umd',
-      sourcemap,
-      globals: {
-        react: 'React',
-        'react-dom': 'ReactDOM',
-        'prop-types': 'PropTypes',
-      },
-    },
-    plugins,
-    external,
-    ...clearScreen,
-  },
+  // {
+  //   input,
+  //   output: {
+  //     name: 'react-horizontal-scrolling-menu',
+  //     file: pkg.browser,
+  //     format: 'umd',
+  //     sourcemap,
+  //     globals: {
+  //       react: 'React',
+  //       'react-dom': 'ReactDOM',
+  //       'prop-types': 'PropTypes',
+  //     },
+  //   },
+  //   plugins,
+  //   external,
+  //   ...clearScreen,
+  // },
 
   // CommonJS (for Node) and ES module (for bundlers) build.
   // (We could have three entries in the configuration array
@@ -66,8 +66,8 @@ export default [
     plugins,
     external,
     output: [
-      // { file: pkg.main, format: 'cjs', sourcemap },
-      { file: pkg.module, format: 'es', sourcemap },
+      { file: pkg.main, format: 'es', sourcemap },
+      // { file: pkg.module, format: 'es', sourcemap },
     ],
     ...clearScreen,
   },
